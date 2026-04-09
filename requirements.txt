@@ -1,0 +1,23 @@
+# ── Core (required for all scripts) ───────────────────────────────────────
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+lightgbm
+xgboost
+optuna
+
+# ── 1h-C only: WangchanBERTa embeddings (test_1hC.py / 1h-C block) ────────
+# Install these only if you intend to use the BERT-based text features.
+# The model weights (~500 MB) are downloaded automatically from HuggingFace
+# on first run and cached at ~/.cache/huggingface/.
+#
+# IMPORTANT: use CamembertTokenizer directly (already done in the code).
+#            AutoTokenizer triggers a Rust tokenizer path that breaks on
+#            transformers >= 5.x with:
+#              TypeError: argument 'vocab': 'str' object cannot be converted to 'PyTuple'
+torch
+transformers
+sentencepiece
+protobuf
